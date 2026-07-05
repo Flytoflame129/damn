@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>学途技能 · 原型</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== 角色选择 ===== -->
+  <div id="role-select">
+    <div class="rs-top">
+      <div class="rs-mark">🌟</div>
+      <h1>学途技能</h1>
+      <p>大学生技能分享 × 兴趣学习陪伴<br>德阳本地技能达人对接平台</p>
+    </div>
+    <div class="rs-banner">📌 本平台仅提供编程、美术、乐器、口语交流、运动等<b>非学科类兴趣技能分享</b>，不涉及中小学学科类课外培训（不含语文/数学/英语等应试类课程辅导）。</div>
+    <div class="rs-cards">
+      <div class="rs-card" onclick="selectRole('parent')">
+        <div class="rs-icon blue">🙋</div>
+        <div class="rs-card-body"><h3>我要学技能</h3><p>发布学习需求，寻找靠谱的大学生技能达人</p></div>
+        <div class="rs-arrow">›</div>
+      </div>
+      <div class="rs-card" onclick="selectRole('tutor')">
+        <div class="rs-icon">🎓</div>
+        <div class="rs-card-body"><h3>我是技能达人</h3><p>完善资料认证身份，浏览需求接单分享技能</p></div>
+        <div class="rs-arrow">›</div>
+      </div>
+    </div>
+    <div class="rs-foot">原型演示 · 仅服务德阳市 · 页面数据均为模拟数据</div>
+  </div>
+
+  <!-- ===== 主界面 ===== -->
+  <div id="main-shell">
+    <div class="header"><h1 id="header-title" style="margin:0 auto 0 0;">学途技能</h1></div>
+    <div class="view" id="content"></div>
+    <div class="bottom-nav" id="bottom-nav"></div>
+  </div>
+
+  <!-- ===== 覆盖层 ===== -->
+  <div id="overlay">
+    <div class="header chat-header">
+      <span class="back-btn" onclick="closeOverlay()">‹</span>
+      <span class="center-title" id="overlay-title">详情</span>
+    </div>
+    <div class="overlay-content" id="overlay-content"></div>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
