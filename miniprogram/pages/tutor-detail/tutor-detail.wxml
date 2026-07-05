@@ -1,0 +1,22 @@
+<view class="page" wx:if="{{tutor}}">
+  <view class="card">
+    <view class="title">{{tutor.realName}}</view>
+    <view class="subtle">{{tutor.school}} · {{tutor.major}} · {{tutor.grade}}</view>
+    <view>
+      <text wx:for="{{tutor.skills}}" wx:key="*this" class="tag">{{item}}</text>
+      <text wx:for="{{tutor.regions}}" wx:key="*this" class="tag tag-warn">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="field-label">介绍</view>
+    <view class="body">{{tutor.bio}}</view>
+  </view>
+
+  <view class="card">
+    <view class="field-label">费用说明</view>
+    <view class="row between"><text>课时费</text><text>¥{{tutor.price}}/小时</text></view>
+    <view class="row between"><text>线上服务费 10%</text><text>¥{{onlineFee}}</text></view>
+    <view class="row between"><text>线下服务费 15%</text><text>¥{{offlineFee}}</text></view>
+  </view>
+</view>

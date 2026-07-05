@@ -1,0 +1,42 @@
+<view class="page">
+  <scroll-view class="chips" scroll-x>
+    <view
+      wx:for="{{skills}}"
+      wx:key="*this"
+      class="chip {{activeSkill === item ? 'active' : ''}}"
+      data-skill="{{item}}"
+      bindtap="selectSkill"
+    >{{item}}</view>
+  </scroll-view>
+
+  <view wx:if="{{loading}}" class="empty">加载中</view>
+
+  <block wx:elif="{{role === 'learner'}}">
+    <view wx:for="{{tutors}}" wx:key="_id" class="card" data-id="{{item._id}}" bindtap="openTutor">
+      <view class="row between">
+        <view>
+          <view class="title">{{item.realName}}</view>
+          <view class="subtle">{{item.school}} · {{item.major}} · {{item.grade}}</view>
+        </view>
+        <view class="price">¥{{item.price}}/小时</view>
+      </view>
+      <view>
+        <text wx:for="{{item.skills}}" wx:key="*this" class="tag">{{item}}</text>
+        <text wx:for="{{item.regions}}" wx:key="*this" class="tag tag-warn">{{item}}</text>
+      </view>
+      <view class="subtle bio">{{item.bio}}</view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view wx:for="{{demands}}" wx:key="_id" class="card" data-id="{{item._id}}" bindtap="openDemand">
+      <view class="row between">
+        <view class="title">{{item.skill}}</view>
+        <view class="status">{{item.status}}</view>
+      </view>
+      <view class="subtle">{{item.learnerInfo}} · {{item.mode}} · {{item.region}}</view>
+      <view class="budget">¥{{item.budgetMin}}-{{item.budgetMax}}/小时</view>
+      <view class="subtle bio">{{item.time}} · {{item.location}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,14 @@
+.notice {
+  color: #db9426;
+  background: #fff8ec;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.budget-row {
+  gap: 18rpx;
+}
+
+.half {
+  flex: 1;
+}

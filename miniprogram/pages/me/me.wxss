@@ -1,0 +1,32 @@
+.hero {
+  background: #33469b;
+  color: #ffffff;
+  border-radius: 20rpx;
+  padding: 40rpx 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.hero .subtle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10rpx;
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+}
+
+.small {
+  font-size: 30rpx;
+}
+
+.chevron {
+  color: #b7bbcb;
+  font-size: 44rpx;
+}
+
+.rules {
+  margin-top: 12rpx;
+  line-height: 1.7;
+}

@@ -1,8 +1,35 @@
+# OS files
 .DS_Store
 Thumbs.db
 Desktop.ini
-node_modules/
-*.log
+
+# Editors
 .vscode/
 .idea/
 *.swp
+
+# Logs and environment
+*.log
+.env
+.env.*
+
+# Node dependencies and generated packages
+node_modules/
+cloudfunctions/**/node_modules/
+miniprogram/miniprogram_npm/
+
+# WeChat DevTools local/private state
+project.private.config.json
+*.private.config.json
+.weapp/
+.qcloud/
+
+# Build and temporary output
+dist/
+build/
+coverage/
+tmp/
+temp/
+
+# Agent/internal planning notes, not app source
+docs/superpowers/

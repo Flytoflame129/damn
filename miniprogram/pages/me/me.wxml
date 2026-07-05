@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="hero">
+    <view class="title">学途技能</view>
+    <view class="subtle">德阳本地非学科类技能分享平台</view>
+  </view>
+
+  <view class="card">
+    <view class="field-label">当前身份</view>
+    <view class="role-row">
+      <button class="{{role === 'learner' ? 'primary-btn' : 'ghost-btn'}}" data-role="learner" bindtap="switchRole">学习需求方</button>
+      <button class="{{role === 'tutor' ? 'primary-btn' : 'ghost-btn'}}" data-role="tutor" bindtap="switchRole">技能达人</button>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{role === 'tutor'}}" bindtap="editProfile">
+    <view class="row between">
+      <view>
+        <view class="title small">资料与认证</view>
+        <view class="subtle">完善资料、上传在读证明后才能申请接单</view>
+      </view>
+      <view class="chevron">›</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="title small">平台边界</view>
+    <view class="subtle rules">仅支持编程入门、绘画设计、乐器声乐、摄影摄像、口语交流、运动技能、书法棋艺、剪辑运营等非学科类方向。正式运营前必须完成备案、隐私协议、审核流程和线下安全规则。</view>
+  </view>
+</view>

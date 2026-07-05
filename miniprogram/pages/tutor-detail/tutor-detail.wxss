@@ -1,0 +1,9 @@
+.body {
+  line-height: 1.7;
+  font-size: 28rpx;
+}
+
+.row {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+}

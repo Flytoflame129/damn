@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/discover/discover",
+    "pages/publish/publish",
+    "pages/messages/messages",
+    "pages/me/me",
+    "pages/tutor-detail/tutor-detail",
+    "pages/demand-detail/demand-detail",
+    "pages/profile-edit/profile-edit"
+  ],
+  "window": {
+    "navigationBarTitleText": "学途技能",
+    "navigationBarBackgroundColor": "#33469B",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F5F6FA"
+  },
+  "tabBar": {
+    "color": "#8A8FA3",
+    "selectedColor": "#33469B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发需求"
+      },
+      {
+        "pagePath": "pages/messages/messages",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于判断线下技能服务的大致区域"
+    }
+  },
+  "requiredPrivateInfos": []
+}

@@ -1,0 +1,10 @@
+.status {
+  color: #3dbe7d;
+  font-weight: 700;
+}
+
+.line {
+  padding: 8rpx 0;
+  font-size: 28rpx;
+  line-height: 1.6;
+}

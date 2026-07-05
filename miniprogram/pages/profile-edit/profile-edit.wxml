@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="field"><text class="field-label">真实姓名</text><input data-key="realName" value="{{form.realName}}" bindinput="updateField" /></view>
+  <view class="field"><text class="field-label">学校</text><input data-key="school" value="{{form.school}}" bindinput="updateField" /></view>
+  <view class="field"><text class="field-label">专业</text><input data-key="major" value="{{form.major}}" bindinput="updateField" /></view>
+  <view class="field"><text class="field-label">年级</text><input data-key="grade" value="{{form.grade}}" bindinput="updateField" /></view>
+
+  <view class="field">
+    <text class="field-label">擅长技能</text>
+    <text wx:for="{{skills}}" wx:key="*this" class="tag" data-value="{{item}}" bindtap="toggleSkill">{{item}}</text>
+  </view>
+
+  <view class="field">
+    <text class="field-label">服务区域</text>
+    <text wx:for="{{regions}}" wx:key="*this" class="tag tag-warn" data-value="{{item}}" bindtap="toggleRegion">{{item}}</text>
+  </view>
+
+  <view class="field"><text class="field-label">课时费</text><input data-key="price" type="number" value="{{form.price}}" bindinput="updateField" /></view>
+  <view class="field"><text class="field-label">个人介绍</text><textarea data-key="bio" value="{{form.bio}}" bindinput="updateField" /></view>
+
+  <view class="card">
+    <view class="field-label">在读证明</view>
+    <button class="ghost-btn" bindtap="chooseProof">{{proofFileId ? '已选择材料' : '上传学生证/在读证明'}}</button>
+  </view>
+
+  <button class="primary-btn" bindtap="submit">保存并提交审核</button>
+</view>

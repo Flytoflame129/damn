@@ -1,0 +1,19 @@
+<view class="page" wx:if="{{demand}}">
+  <view class="card">
+    <view class="row between">
+      <view class="title">{{demand.skill}}</view>
+      <view class="status">{{demand.status}}</view>
+    </view>
+    <view class="subtle">{{demand.learnerInfo}} · {{demand.mode}} · {{demand.region}}</view>
+  </view>
+
+  <view class="card">
+    <view class="field-label">需求信息</view>
+    <view class="line">时间：{{demand.time}}</view>
+    <view class="line">预算：¥{{demand.budgetMin}}-{{demand.budgetMax}}/小时</view>
+    <view class="line">地点：{{demand.location}}</view>
+    <view class="line">说明：{{demand.note}}</view>
+  </view>
+
+  <button class="primary-btn" loading="{{applying}}" bindtap="apply">申请接单</button>
+</view>

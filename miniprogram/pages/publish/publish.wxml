@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="card notice">仅发布非学科类兴趣技能需求，不支持语文、数学、英语等应试课程。</view>
+
+  <view class="field">
+    <text class="field-label">学员情况</text>
+    <input data-key="learnerInfo" value="{{form.learnerInfo}}" bindinput="updateField" placeholder="例如：10岁 零基础" />
+  </view>
+
+  <view class="field">
+    <text class="field-label">技能类别</text>
+    <picker data-key="skill" range="{{skills}}" bindchange="pickField">
+      <view>{{form.skill}}</view>
+    </picker>
+  </view>
+
+  <view class="field">
+    <text class="field-label">授课方式</text>
+    <picker data-key="mode" range="{{modes}}" bindchange="pickField">
+      <view>{{form.mode}}</view>
+    </picker>
+  </view>
+
+  <view class="field">
+    <text class="field-label">服务区域</text>
+    <picker data-key="region" range="{{regions}}" bindchange="pickField">
+      <view>{{form.region}}</view>
+    </picker>
+  </view>
+
+  <view class="field">
+    <text class="field-label">期望时间</text>
+    <input data-key="time" value="{{form.time}}" bindinput="updateField" placeholder="例如：周六上午" />
+  </view>
+
+  <view class="row budget-row">
+    <view class="field half">
+      <text class="field-label">最低预算</text>
+      <input data-key="budgetMin" type="number" value="{{form.budgetMin}}" bindinput="updateField" placeholder="90" />
+    </view>
+    <view class="field half">
+      <text class="field-label">最高预算</text>
+      <input data-key="budgetMax" type="number" value="{{form.budgetMax}}" bindinput="updateField" placeholder="120" />
+    </view>
+  </view>
+
+  <view class="field">
+    <text class="field-label">地点或线上说明</text>
+    <input data-key="location" value="{{form.location}}" bindinput="updateField" placeholder="线下填写大致区域" />
+  </view>
+
+  <view class="field">
+    <text class="field-label">补充说明</text>
+    <textarea data-key="note" value="{{form.note}}" bindinput="updateField" placeholder="学习目标、基础、偏好" />
+  </view>
+
+  <button class="primary-btn" bindtap="submit">发布需求</button>
+</view>

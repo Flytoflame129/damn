@@ -1,0 +1,37 @@
+.chips {
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 12rpx 28rpx;
+  margin-right: 14rpx;
+  border-radius: 32rpx;
+  background: #ffffff;
+  color: #8a8fa3;
+  font-size: 26rpx;
+}
+
+.chip.active {
+  background: #33469b;
+  color: #ffffff;
+}
+
+.price,
+.budget {
+  color: #db9426;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.status {
+  color: #3dbe7d;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.bio {
+  margin-top: 16rpx;
+  line-height: 1.6;
+}

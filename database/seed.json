@@ -1,0 +1,42 @@
+{
+  "tutorProfiles": [
+    {
+      "realName": "李思远",
+      "school": "电子科技大学",
+      "major": "计算机系",
+      "grade": "大三",
+      "skills": ["编程入门"],
+      "regions": ["旌阳区", "经开区"],
+      "price": 100,
+      "rating": 4.9,
+      "verificationStatus": "approved",
+      "bio": "信息竞赛省一，擅长少儿编程启蒙与 Python 基础。"
+    },
+    {
+      "realName": "陈雨桐",
+      "school": "四川大学",
+      "major": "英语系",
+      "grade": "大二",
+      "skills": ["口语交流"],
+      "regions": ["旌阳区", "罗江区"],
+      "price": 90,
+      "rating": 4.8,
+      "verificationStatus": "approved",
+      "bio": "日常口语交流陪练与兴趣角活动，不涉及应试课程。"
+    }
+  ],
+  "demands": [
+    {
+      "learnerInfo": "10岁 零基础",
+      "skill": "编程入门",
+      "mode": "线下",
+      "region": "旌阳区",
+      "time": "周末上午 9:00-11:00",
+      "budgetMin": 90,
+      "budgetMax": 120,
+      "location": "旌阳区凤山路附近",
+      "note": "培养逻辑思维，不做竞赛培训",
+      "status": "open"
+    }
+  ]
+}
