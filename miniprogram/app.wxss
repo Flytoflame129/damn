@@ -53,6 +53,11 @@ page {
   color: #db9426;
 }
 
+.tag-selected {
+  background: #33469b;
+  color: #ffffff;
+}
+
 .primary-btn {
   background: #33469b;
   color: #ffffff;

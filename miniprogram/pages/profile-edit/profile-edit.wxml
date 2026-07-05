@@ -6,12 +6,12 @@
 
   <view class="field">
     <text class="field-label">擅长技能</text>
-    <text wx:for="{{skills}}" wx:key="*this" class="tag" data-value="{{item}}" bindtap="toggleSkill">{{item}}</text>
+    <text wx:for="{{skills}}" wx:key="*this" class="tag {{selectedSkillMap[item] ? 'tag-selected' : ''}}" data-value="{{item}}" bindtap="toggleSkill">{{item}}</text>
   </view>
 
   <view class="field">
     <text class="field-label">服务区域</text>
-    <text wx:for="{{regions}}" wx:key="*this" class="tag tag-warn" data-value="{{item}}" bindtap="toggleRegion">{{item}}</text>
+    <text wx:for="{{regions}}" wx:key="*this" class="tag tag-warn {{selectedRegionMap[item] ? 'tag-selected' : ''}}" data-value="{{item}}" bindtap="toggleRegion">{{item}}</text>
   </view>
 
   <view class="field"><text class="field-label">课时费</text><input data-key="price" type="number" value="{{form.price}}" bindinput="updateField" /></view>

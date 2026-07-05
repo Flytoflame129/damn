@@ -16,6 +16,8 @@ Page({
       price: '',
       bio: ''
     },
+    selectedSkillMap: {},
+    selectedRegionMap: {},
     proofFileId: ''
   },
 
@@ -27,17 +29,30 @@ Page({
   toggleSkill(event) {
     const skill = event.currentTarget.dataset.value;
     const skills = this.toggle(this.data.form.skills, skill);
-    this.setData({ 'form.skills': skills });
+    this.setData({
+      'form.skills': skills,
+      selectedSkillMap: this.toSelectedMap(skills)
+    });
   },
 
   toggleRegion(event) {
     const region = event.currentTarget.dataset.value;
     const regions = this.toggle(this.data.form.regions, region);
-    this.setData({ 'form.regions': regions });
+    this.setData({
+      'form.regions': regions,
+      selectedRegionMap: this.toSelectedMap(regions)
+    });
   },
 
   toggle(list, value) {
     return list.includes(value) ? list.filter(item => item !== value) : list.concat(value);
+  },
+
+  toSelectedMap(list) {
+    return list.reduce((map, item) => {
+      map[item] = true;
+      return map;
+    }, {});
   },
 
   chooseProof() {
@@ -56,6 +71,10 @@ Page({
   },
 
   submit() {
+    if (!this.data.proofFileId) {
+      wx.showToast({ title: '请先上传在读证明', icon: 'none' });
+      return;
+    }
     const result = validateTutorProfileInput(this.data.form);
     if (!result.ok) {
       wx.showToast({ title: result.errors[0], icon: 'none' });
