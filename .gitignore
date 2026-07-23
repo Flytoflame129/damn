@@ -23,6 +23,7 @@ project.private.config.json
 *.private.config.json
 .weapp/
 .qcloud/
+.cloudbase/
 
 # Build and temporary output
 dist/
